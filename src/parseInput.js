@@ -16,7 +16,8 @@ const parseInput = (argv) => {
 
   const isConversion = Boolean(input && output);
 
-  const [amount = 1] = input.match(/(\d+)/) || [];
+  const [amountString = '1'] = input.match(/(\d+)/) || [];
+  const amount = Number.parseFloat(amountString);
   const inputCurrencyMatch = input.match(CURRENCY_REGEXP) || [DEFAULT_CURRENCY];
   const inputCurrency = getCurrency(inputCurrencyMatch[0]).toUpperCase();
   const outputCurrencyMatch = output.match(CURRENCY_REGEXP) || [DEFAULT_CURRENCY];

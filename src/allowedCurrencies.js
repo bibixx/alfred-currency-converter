@@ -1,4 +1,5 @@
 const ALLOWED_CURRENCIES = [
+  'EUR',
   'USD',
   'JPY',
   'BGN',
