@@ -8,7 +8,9 @@ const { alfredFormat } = require('./alfredFormat');
 const { parseInput } = require('./parseInput');
 
 (async () => {
-  const [,,input = ''] = process.argv;
+  const [,,...inputs] = process.argv;
+  const input = inputs.join(' ');
+
   const {
     isConversion,
     amount,
